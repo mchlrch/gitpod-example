@@ -3,7 +3,7 @@ image:
 
 vscode:
   extensions:
-    - zazuko-gmbh.expressive-rdf-mapper
+    - https://download.zazukoians.org/xrm-shacl-prototype-vscode/xrm-shacl-prototype-1.2.0.vsix
 
 tasks:
   - name: mysql-data-load

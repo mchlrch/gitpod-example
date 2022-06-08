@@ -25,3 +25,9 @@ tasks:
     command: |
       gp sync-await convert
       npm run pipeline-file
+  - name: validate
+    before: cd validate
+    init: npm ci
+    command: |
+      gp sync-await pipeline
+      npm run validate-file

@@ -2,6 +2,20 @@ language-tags {
 	en
 }
 
+vocabulary rdf {
+	prefix "rdf" "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+
+	properties
+		^type
+}
+
+vocabulary xsd {
+	prefix "xsd" "http://www.w3.org/2001/XMLSchema#"
+
+	datatypes
+		string
+}
+
 vocabulary ex {
 	prefix "ex" "http://example.com/ns#"
 

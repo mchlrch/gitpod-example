@@ -1,0 +1,52 @@
+BASE <http://example.com/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX ex: <http://example.com/ns#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<EmployeeShape> a sh:NodeShape .
+<EmployeeShape> sh:targetClass ex:Employee .
+<EmployeeShape> sh:closed true .
+<EmployeeShape> sh:ignoredProperties (rdf:type) .
+<EmployeeShape> sh:property [
+	sh:path ex:name ;
+	sh:nodeKind sh:Literal ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:datatype xsd:string ;
+] .
+<EmployeeShape> sh:property [
+	sh:path ex:department ;
+	sh:nodeKind sh:IRI ;
+	sh:class ex:Department ;
+] .
+
+<DepartmentShape> a sh:NodeShape .
+<DepartmentShape> sh:targetClass ex:Department .
+<DepartmentShape> sh:closed true .
+<DepartmentShape> sh:ignoredProperties (rdf:type) .
+<DepartmentShape> sh:property [
+	sh:path ex:name ;
+	sh:nodeKind sh:Literal ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+] .
+<DepartmentShape> sh:property [
+	sh:path schema:location ;
+	sh:nodeKind sh:IRI ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:class schema:Place ;
+] .
+
+<LocationShape> a sh:NodeShape .
+<LocationShape> sh:targetClass schema:Place .
+<LocationShape> sh:closed true .
+<LocationShape> sh:ignoredProperties (rdf:type) .
+<LocationShape> sh:property [
+	sh:path schema:name ;
+	sh:nodeKind sh:Literal ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+] .

@@ -1,0 +1,59 @@
+base "http://example.com/"
+
+node-shape EmployeeShape {
+
+    target-classes
+      ex.Employee
+
+    closed
+
+    ignored-properties
+		  rdf.^type
+
+    properties
+      
+      ex.name node-kind Literal [1..1] {
+			  datatype xsd.string
+		  }
+
+      ex.department node-kind IRI [0..*] {
+        classes ex.Department
+      }
+}
+
+node-shape DepartmentShape {
+
+    target-classes
+      ex.Department
+
+    closed
+
+    ignored-properties
+		  rdf.^type
+
+    properties
+      ex.name node-kind Literal [1..1] {
+			  // datatype xsd.string
+		  }
+
+      schema.location node-kind IRI [1..1] {
+        classes schema.Place
+      }
+}
+
+node-shape LocationShape {
+
+    target-classes
+      schema.Place
+
+    closed
+
+    ignored-properties
+		  rdf.^type
+
+    properties
+        schema.name node-kind Literal [1..1] {
+		      // datatype xsd.string
+		    }
+}
+

@@ -4,6 +4,7 @@ image:
 vscode:
   extensions:
     - https://download.zazukoians.org/xrm-shacl-prototype-vscode/xrm-shacl-prototype-1.2.0.vsix
+    - https://Zazuko.gallery.vsassets.io/_apis/public/gallery/publisher/Zazuko/extension/vscode-rdf-sketch/0.0.8/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage
 
 tasks:
   - name: mysql-data-load

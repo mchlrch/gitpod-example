@@ -31,6 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	sh:nodeKind sh:Literal ;
 	sh:minCount 1 ;
 	sh:maxCount 1 ;
+	sh:datatype rdf:langString ;
 ] .
 <DepartmentShape> sh:property [
 	sh:path schema:location ;
@@ -49,4 +50,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	sh:nodeKind sh:Literal ;
 	sh:minCount 1 ;
 	sh:maxCount 1 ;
+	sh:datatype rdf:langString ;
 ] .

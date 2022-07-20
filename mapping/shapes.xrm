@@ -33,7 +33,7 @@ node-shape DepartmentShape {
 
     properties
       ex.name node-kind Literal [1..1] {
-			  // datatype xsd.string
+			  datatype rdf.langString
 		  }
 
       schema.location node-kind IRI [1..1] {
@@ -53,7 +53,7 @@ node-shape LocationShape {
 
     properties
         schema.name node-kind Literal [1..1] {
-		      // datatype xsd.string
+		      datatype rdf.langString
 		    }
 }
 

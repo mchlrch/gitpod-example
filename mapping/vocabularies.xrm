@@ -7,6 +7,9 @@ vocabulary rdf {
 
 	properties
 		^type
+
+	datatypes
+		langString
 }
 
 vocabulary xsd {
